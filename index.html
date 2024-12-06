@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(team name here) #977</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="icon" type="image/x-icon" href="wizard npc1.png">
+    <style>
+        /* Existing styles */
+
+        #three h1,
+        #three h2 {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Add the visible class when grayscale is removed */
+        #three.grayscale-removed h1,
+        #three.grayscale-removed h2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <section id="one">
+        <div class="banner">
+            <div class="header">
+                <img src="logo.png" class="logo">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#one">home</a></li>
+                        <li><a href="#two">about us</a></li>
+                        <li><a href="#three">games</a></li>
+                        <li><a href="#four">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h1>(insert team name here) #977</h1>
+                <p>wanna know more? <a href="#two">click here!</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="two">
+        <h1 id="iforgor">About Us</h1>
+        <p>We're an FLL group, made of 8th and 9th graders from various schools across Israel. We built this website to show you our innovation project.</p>
+    </section>
+
+    <section id="three">
+        <h1>Our Innovation</h1>
+        <h2>Work In Progress</h2>
+    </section>
+
+    <section id="four">
+        <div class="contact">
+            <h1>Contact Us!</h1>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="362388d4-9673-4748-88a2-461899a81529">
+                <input type="text" name="Name" placeholder="Your Name">
+                <input type="text" name="Email" placeholder="Your Email" required>
+                <input type="text" name="Phone Number" placeholder="Your Phone Number">
+                <textarea rows="5" cols="60" name="Message" placeholder="Your Message" autocomplete="off" required></textarea>
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+        <div class="DownloadSection">
+            <h1>Try Our Demos!</h1>
+            <a href="https://drive.google.com/file/d/18LRbxxkjzeVUaAoLsuXNFwnhY5Cw_ZDp/view?usp=sharing" target="_blank">
+                Download Demo
+            </a>
+        </div>
+    </section>
+
+    <script>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Redirect function
+        function redirectToMobile() {
+            window.location.href = "indexmobile.html"; // Replace this with the URL you want to redirect mobile users to
+        }
+
+        // Check if the user is on a mobile device and redirect if so
+        if (isMobile()) {
+            redirectToMobile();
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const three = document.querySelector('#three');
+
+            const sectionOneHeight = document.querySelector('#one').offsetHeight - 460;
+            const sectionTwoHeight = document.querySelector('#two').offsetHeight + 400;
+            const sectionThreeStart = sectionOneHeight + sectionTwoHeight;
+
+            if (window.scrollY > sectionOneHeight) {
+                header.classList.add('minimized');
+            } else {
+                header.classList.remove('minimized');
+            }
+
+            if (window.scrollY > sectionThreeStart) {
+                three.classList.remove('grayscale');
+                three.classList.add('grayscale-removed');
+            } else {
+                three.classList.add('grayscale');
+                three.classList.remove('grayscale-removed');
+            }
+        });
+    </script>
+</body>
+</html>

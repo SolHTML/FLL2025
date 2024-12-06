@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.banner {
+    width: 100vw;
+    height: 99.95vh;
+    background-image: url(background.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+/* Style the navbar */
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+/* Sliding animation for the navbar */
+@keyframes slideToCenter {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-21%);
+    }
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes HeaderA {
+    from {
+        opacity: 0.5;
+        background-image: linear-gradient(to bottom, rgba(38, 46, 63, 0.7), rgba(38, 46, 63, 0))
+    }
+    to {
+        opacity: 1;
+        background-image: linear-gradient(to bottom, rgba(80, 148, 183, 1), rgb(71, 140, 175, 1))
+    }
+}
+
+/* Style the minimized navbar */
+.header.minimized .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideToCenter 0.5s forwards;
+}
+
+.header.minimized .navbar ul {
+    margin-left: 0;
+}
+
+/* Float the link section to the right */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+}
+
+.navbar ul li {
+    font-size: xx-large;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Style the navbar links */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Style the link underline */
+.navbar ul li::before {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width 0.5s ease, transform 0.5s ease;
+}
+
+.navbar ul li:hover::before {
+    width: 100%;
+    transform: translateX(-50%) scaleX(1);
+}
+
+.websitesp {
+    text-align: center;
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Style the header with a grey background */
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(38, 46, 63, 0.7), rgba(38, 46, 63, 0));
+    opacity: 0.75;
+    display: flex;
+    align-items: center;
+    height: 125px;
+    padding: 0 20px;
+    transition: height 0.5s ease;
+}
+
+.header.minimized {
+    height: 75px;
+    padding: 0 20px;
+    animation: HeaderA 1s forwards;
+}
+
+.header.minimized img.logo {
+    animation: fadeOut 0.5s forwards;
+}
+
+.header img.logo {
+    height: 130%;
+    width: auto;
+    display: block;
+    margin-left: 75px;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #00000074;
+}
+
+/* Style the active/current link */
+.header a.active {
+    background-color: dodgerblue;
+    color: #000000;
+}
+
+/* Float the link section to the right */
+.header-right {
+    margin-left: auto;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 428px) {
+    .header img.logo {
+        display: none;
+    }
+
+    .header {
+        height: 50px;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .navbar ul li {
+        margin: 5px;
+    }
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 17%;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #c9bc09c3;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.link_underline {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: xx-large;
+}
+
+.content {
+    color: #072a31;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+#one {
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#two {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    background-image: linear-gradient(180deg,#1f4e59, #0d2d3a);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 120vh;
+}
+
+#two h1 {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000000;
+    font-size: 200px;
+    animation: texthingy 3s ease forwards;
+    animation-timeline: view();
+    animation-duration: 1s;
+    margin-bottom: 550px;
+}
+
+#two p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+    right: 700px;
+    font-size: 50px;
+    animation: texthingy1 1s ease forwards;
+    animation-timeline: view();
+    animation-duration: 1s;
+}
+
+@keyframes texthingy {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    57% {
+        opacity: 0;
+        transform: translate();
+    }
+    100% {
+        opacity: 1;
+        transform: translate();
+    }
+}
+
+@keyframes texthingy1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+        transform: translate();
+    }
+    100% {
+        opacity: 1;
+        transform: translate();
+    }
+}
+
+#three {
+    background: url("background-three.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 130vh;
+    filter: grayscale(0%);
+    transition: filter 1s ease-in-out;
+}
+
+#three.grayscale {
+    filter: grayscale(100%);
+}
+
+#three h1 {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(226, 226, 226);
+    font-size: 200px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: sticky;
+    top:20px;
+    margin-bottom: 500px;
+    margin-left: 40%;
+    opacity: 0;
+    transition: opcity 5s ease-in;
+}
+
+#three h2{
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(226, 226, 226);
+    font-size: 90px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    margin-bottom: 200px;
+    right: 1100px;
+    opacity: 0;
+    transition: opcity 5s ease-in;
+}
+
+#three.grayscale-removed h1,
+#three.grayscale-removed h2 {
+    opacity: 1;
+}
+
+#four {
+    height: 98vh;
+    background-image: linear-gradient(-90deg,rgb(0, 0, 43) 50%, rgb(0, 0, 134) 50%);
+    background-size: cover; 
+    background-position: center;
+}
+
+#four .contact {
+    width: 50vw;
+    height: 49vh;
+    margin-bottom: 200px;
+}
+
+#four .contact h1 {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-right: 2%;
+    font-size: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+#four input {
+    background-color: white;
+    width: 50%;
+    margin-left: 23.5%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    border-color: black;
+    margin-bottom: 20px;
+}
+
+#four textarea {
+    background-color: white;
+    width: 50%;
+    margin-left: 23.5%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    border-color: black;
+    margin-bottom: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#four input:focus-within {
+    outline: none;
+    border-color: #5bd183;
+    border-width: 3px;
+}
+
+#four textarea:focus-within {
+    outline: none;
+    border-color: #5bd183;
+    border-width: 3px;
+}
+
+#four button {
+    background-color: #5bd183;
+    border-radius: 20px;
+    border-color: black;
+    font-size: 22px;
+    padding: 10px 18px;
+}
+
+#four button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+#four .DownloadSection {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 49vh;
+}
+
+#four a {
+    opacity: 1;
+    display: block;
+    background: rgb(20, 163, 20);
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 320px;
+    height: 150px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 50px;
+    font-weight: 400;
+    font: bold;
+}
+
+#four a:hover {
+    opacity: 0.5;
+}
+
+#four .DownloadSection h1 {
+    position: relative;
+    bottom: 60px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
