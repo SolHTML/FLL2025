@@ -9,7 +9,7 @@
 .banner {
     width: 100vw;
     height: 99.95vh;
-    background-image: url(background.jpg);
+    background-image: url(assets/background.jpg);
     background-size: cover; 
     background-position: center;
 }
@@ -337,7 +337,7 @@ section {
 }
 
 #three {
-    background: url("background-three.jpeg");
+    background: url("assets/background-three.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
