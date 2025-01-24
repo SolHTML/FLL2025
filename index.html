@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(team name here) #977</title>
+    <title>Team MixUp #977</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="icon" type="image/x-icon" href="assets/cat (free my family please).png">
     <style>
@@ -38,7 +38,7 @@
             </div>
             <div class="content">
                 <h1>welcome to our display site!</h1>
-                <p>wanna know more? <a href="https://docs.google.com/document/d/1UXoIYhjBvCcAOnTKSDbZjJEa1cb0HJ6xlrbxQN-Oucg/edit?usp=sharingo" target="_blank">click here!</a></p>
+                <p>wanna know more? <a href="https://docs.google.com/document/d/1UXoIYhjBvCcAOnTKSDbZjJEa1cb0HJ6xlrbxQN-Oucg/edit?usp=sharingo" target="_blank" rel="noopener">click here!</a></p>
             </div>
         </div>
     </section>
@@ -99,39 +99,42 @@
         function isMobile() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
-
+    
         // Redirect function
         function redirectToMobile() {
             window.location.href = "indexmobile.html"; // Replace this with the URL you want to redirect mobile users to
         }
-
+    
         // Check if the user is on a mobile device and redirect if so
         if (isMobile()) {
             redirectToMobile();
         }
-
-        window.addEventListener('scroll', function() {
+    
+        let sectionThreeTriggered = false; // Flag to check if the effect has been applied
+    
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('.header');
             const three = document.querySelector('#three');
-
+    
             const sectionOneHeight = document.querySelector('#one').offsetHeight - 460;
             const sectionTwoHeight = document.querySelector('#two').offsetHeight + 400;
             const sectionThreeStart = sectionOneHeight + sectionTwoHeight;
-
+    
+            // Minimize header
             if (window.scrollY > sectionOneHeight) {
                 header.classList.add('minimized');
             } else {
                 header.classList.remove('minimized');
             }
-
-            if (window.scrollY > sectionThreeStart) {
+    
+            // Trigger the grayscale removal effect only once
+            if (window.scrollY > sectionThreeStart && !sectionThreeTriggered) {
                 three.classList.remove('grayscale');
                 three.classList.add('grayscale-removed');
-            } else {
-                three.classList.add('grayscale');
-                three.classList.remove('grayscale-removed');
+                sectionThreeTriggered = true; // Set the flag to true to prevent re-triggering
             }
         });
     </script>
+    
 </body>
 </html>
