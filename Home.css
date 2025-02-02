@@ -6,6 +6,10 @@
     -webkit-user-select: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 
 .banner {
@@ -68,18 +72,18 @@
 }
 
 .header.minimized .navbar ul {
-    margin-left: -4%;
+    margin-left: -2%;
 }
 
 /* Float the link section to the right */
 .navbar ul {
     display: flex;
     align-items: center;
-    margin-left: 25%;
+    margin-left: 20%;
 }
 
 .navbar ul li {
-    font-size: xx-large;
+    font-size: large;
     list-style: none;
     margin: 0 20px;
     position: relative;
@@ -136,7 +140,7 @@
 }
 
 .header.minimized {
-    height: 75px;
+    height: 65px;
     padding: 0 20px;
     animation: HeaderA 1s forwards;
 }
@@ -146,7 +150,7 @@
 }
 
 .header img.logo {
-    height: 130%;
+    height: 110%;
     width: auto;
     display: block;
     margin-left: 75px;
@@ -283,28 +287,28 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 70px;
     color: white;
-    right: 870px;
-    font-size: 50px;
-    width: 900px;
+    right: 680px;
+    font-size: 35px;
+    width: 600px;
 }
 
 #two .s1 {
     position: absolute;
-    right: 830px;
-    top: 1050px;
-    height: 200px;
+    right: 670px;
+    top: 710px;
+    height: 130px;
     width: auto;
     transform: rotate(358deg);
 }
 
 #two .s2 {
     position: absolute;
-    top: 1170px;
-    height: 500px;
+    height: 450px;
     width: auto;
-    left: 1175px;
+    left: 720px;
+    top: 730px;
     transform: rotate(365deg);
 }
 
@@ -365,11 +369,11 @@ section {
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 32px;
+    font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
-    bottom: 140px;
-    left: 180px;
+    bottom: 90px;
+    left: 130px;
     max-width: 82%;
     margin: 20 auto;
     opacity: 0; /* Initially set to 0 */
@@ -382,10 +386,10 @@ section {
     justify-content: center;
     text-align: justify;
     color: rgb(226, 226, 226);
-    font-size: 200px;
+    font-size: 150px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
-    top: 30px;
+    top: 10px;
     opacity: 0; /* Initially set to 0 */
     transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
 }
@@ -412,7 +416,7 @@ section {
 
 
 #four {
-    height: 98vh;
+    height: 95vh;
     background-image: linear-gradient(-90deg,rgb(0, 0, 43) 50%, rgb(0, 0, 134) 50%);
     background-size: cover; 
     background-position: center;
@@ -421,8 +425,8 @@ section {
 #four .contact {
     width: 50vw;
     height: 49vh;
-    margin-bottom: 235px;
-    margin-right: 900px;
+    margin-bottom: 335px;
+    margin-right: 800px;
 }
 
 #four .contact h1 {
@@ -432,31 +436,32 @@ section {
     color: white;
     padding: 10px;
     text-align: center;
-    margin-right: 2%;
-    font-size: 60px;
+    margin-right: -20%;
+    font-size: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
 
 #four input {
     background-color: white;
-    width: 50%;
+    width: 80%;
     margin-left: 23.5%;
     font-size: 20px;
     padding: 16px 16px;
     border-radius: 10px;
     border-color: black;
     margin-bottom: 20px;
+    height: 10px;
 }
 
 #four textarea {
     background-color: white;
-    width: 50%;
+    width: 80%;
     margin-left: 23.5%;
     font-size: 20px;
     padding: 16px 16px;
     border-radius: 10px;
     border-color: black;
-    margin-bottom: 25px;
+    height: 150px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -478,6 +483,7 @@ section {
     border-color: black;
     font-size: 22px;
     padding: 10px 18px;
+    margin-left: 230px;
 }
 
 #four button:hover {
@@ -517,13 +523,13 @@ section {
 
 #four .work .headline1 {
     position: absolute;
-    top: 3055px;  /* Adjusted */
-    left: 500px;
+    top: 2115px;  /* Adjusted */
+    left: 380px;
     right: 0;
     color: white;
     padding: 10px;
     text-align: center;
-    font-size: 150px;
+    font-size: 110px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: normal;
     word-break: break-word;
@@ -533,13 +539,13 @@ section {
 
 #four .work .headline2 {
     position: absolute;
-    top: 3195px;  /* Adjusted */
-    left: 500px;
+    top: 2220px;  /* Adjusted */
+    left: 380px;
     right: 0;
     color: white;
     padding: 10px;
     text-align: center;
-    font-size: 130px;
+    font-size: 110px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: normal;
     word-break: break-word;
@@ -549,13 +555,13 @@ section {
 
 #four .work .headline3 {
     position: absolute;
-    top: 3495px;  /* Adjusted */
-    left: 1425px;
+    top: 2440px;  /* Adjusted */
+    left: 1015px;
     right: 0;
     color: white;
     padding: 10px;
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: normal;
     word-break: break-word;
@@ -565,13 +571,13 @@ section {
 
 #four .work .headline4 {
     position: absolute;
-    top: 3540px;  /* Adjusted */
-    left: 1415px;
+    top: 2480px;  /* Adjusted */
+    left: 1015px;
     right: 0;
     color: white;
     padding: 10px;
     text-align: center;
-    font-size: 150px;
+    font-size: 100px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: normal;
     word-break: break-word;
@@ -581,18 +587,18 @@ section {
 
 #four .work .guided {
     position: absolute;
-    top: 3015px;  /* Adjusted */
-    left: 1425px;
-    height: 450px;
+    top: 2080px;  /* Adjusted */
+    left: 1025px;
+    height:310px;
     width: auto;
     transform: rotate(355deg);
 }
 
 #four .work .submarine {
     position: absolute;
-    top: 3455px;  /* Adjusted */
-    left: 965px;
-    height: 310px;
+    top: 2390px;  /* Adjusted */
+    left: 700px;
+    height: 230px;
     width: auto;
     transform: rotate(5deg);
 }
